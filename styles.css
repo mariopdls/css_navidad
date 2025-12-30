@@ -1,0 +1,1094 @@
+/* ==================== ESTILOS GENERALES ==================== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  margin: 30px 0 10px;
+  font-size: 2.8rem;
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+  z-index: 10;
+}
+
+h2 {
+  margin: 40px 0 15px;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+  z-index: 10;
+}
+
+section {
+  margin: 40px 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==================== NIEVE QUE CAE ==================== */
+.snow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255,255,255,0.8);
+  animation: fall linear infinite;
+  top: -20px;
+}
+
+.snow:nth-child(1)  { left: 10%; animation-duration: 12s; animation-delay: 0s; }
+.snow:nth-child(2)  { left: 20%; animation-duration: 15s; animation-delay: -2s; width: 6px; height: 6px; }
+.snow:nth-child(3)  { left: 30%; animation-duration: 10s; animation-delay: -4s; }
+.snow:nth-child(4)  { left: 40%; animation-duration: 18s; animation-delay: -1s; width: 4px; height: 4px; }
+.snow:nth-child(5)  { left: 50%; animation-duration: 14s; animation-delay: -6s; }
+.snow:nth-child(6)  { left: 60%; animation-duration: 13s; animation-delay: -3s; width: 8px; height: 8px; }
+.snow:nth-child(7)  { left: 70%; animation-duration: 16s; animation-delay: -5s; }
+.snow:nth-child(8)  { left: 80%; animation-duration: 11s; animation-delay: -7s; width: 5px; height: 5px; }
+.snow:nth-child(9)  { left: 90%; animation-duration: 17s; animation-delay: -1.5s; }
+.snow:nth-child(10) { left: 15%; animation-duration: 19s; animation-delay: -8s; width: 7px; height: 7px; }
+
+@keyframes fall {
+  0% { transform: translateY(-100vh) translateX(0); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: translateY(200vh) translateX(60px); opacity: 0.3; }
+}
+
+/* ==================== REGALO CON ELFO ==================== */
+.contenedor {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  background: #c1121f;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.elfo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3.5rem;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
+}
+
+/* ==================== VENTANAS NAVIDEÑAS ==================== */
+.ventanas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  width: 380px;
+  padding: 20px;
+  background: #1b263b;
+  border-radius: 12px;
+}
+
+.ventana {
+  aspect-ratio: 1 / 1;
+  background: #c1121f;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 4.5rem;
+}
+
+/* ==================== MENÚ DEL BANQUETE (Día 12) ==================== */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: #386641;
+  padding: 20px 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  max-width: 90%;
+  border-radius: 12px;
+}
+
+.categoria {
+  background: #6a994e;
+  color: white;
+  padding: 16px 28px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  min-width: 140px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.categoria:hover {
+  transform: scale(1.1);
+}
+
+/* ==================== POSTAL RESPONSIVA (Día 13) ==================== */
+.postal {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.postal p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.banner {
+  background-color: gold;
+  color: black;
+  padding: 60px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.banner small {
+  font-size: 16px;
+  font-weight: normal;
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .banner {
+    background-color: orange;
+  }
+}
+
+/* ==================== VARIABLES CSS (Día 14) ==================== */
+.botones-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.botones-day p {
+  color: #555;
+}
+
+.button-container {
+  padding: 40px;
+  text-align: center;
+  border: 3px dashed #c1121f;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.normal-button, .custom-button {
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.normal-button {
+  background-color: green;
+}
+
+.normal-button:hover {
+  background-color: red;
+}
+
+:root {
+  --primary-color: green;
+  --hover-color: red;
+}
+
+.custom-button {
+  background-color: var(--primary-color);
+}
+
+.custom-button:hover {
+  background-color: var(--hover-color);
+}
+
+/* ==================== TARJETA PLEGABLE (Día 15) ==================== */
+.card-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.card-day p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 300px;
+  height: 180px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  display: flex;
+  position: relative;
+}
+
+.card-top {
+  background-color: #ffd700;
+  color: black;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 50px 20px;
+  transition: width 0.8s ease;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.card-bottom {
+  background-color: #c1121f;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 50px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover .card-top {
+  width: 60px;
+}
+
+/* ==================== TABLA DE REGALOS (Día 16) ==================== */
+.tabla-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.tabla-day p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.gifts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.gifts-table th {
+  background-color: #186f3d;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.gifts-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.gifts-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.gifts-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.gifts-table tbody tr:hover {
+  background-color: #ffcccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* ==================== COPO DE NIEVE (Día 17) ==================== */
+.copo-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.copo-day p {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.snowflake {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.snowflake::before,
+.snowflake::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 14px;
+  background-color: #bbdefb;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.snowflake::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* ==================== FILTRO INVERNAL (Día 18) ==================== */
+.filtro-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.filtro-day p {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.image-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  filter: grayscale(100%) blur(5px);
+  transition: filter 0.6s ease;
+}
+
+.image-container img:hover {
+  filter: grayscale(0%) blur(0px);
+}
+
+/* ==================== GALERÍA NAVIDEÑA (Día 19) ==================== */
+.galeria-day {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.galeria-day p {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+}
+
+.gallery img:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 480px;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery img:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery img:first-child {
+    grid-column: 1 / -1;
+    height: auto;
+  }
+}
+
+/* ==================== SCROLL DE PAPÁ NOEL (Día 20) ==================== */
+.scroll-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.scroll-day p {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.scroll-container {
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+  background-color: #fff5f5;
+  border: 4px solid #c1121f;
+  border-radius: 12px;
+  padding: 25px;
+  overflow: auto;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.8;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+}
+
+.scroll-container h2 {
+  color: #c1121f;
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.scroll-container p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* ==================== BOLA DE CRISTAL (Día 21) ==================== */
+.crystal-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.crystal-day p {
+  color: #555;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.crystal-ball-container {
+  margin: 0 auto;
+  width: 350px;
+  padding: 20px;
+  background: radial-gradient(circle, #e0e0e0, #aaaaaa);
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.crystal-ball-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.crystal-ball-container:hover img {
+  transform: rotate(25deg) scale(1.4);
+}
+
+/* ==================== FORMULARIO DE DESEOS (Día 22) ==================== */
+.form-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.form-day p {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.wishes-form {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 40px;
+  background-color: #f8fff8;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 2px solid #c1121f;
+}
+
+.wishes-form label {
+  font-weight: bold;
+  color: #155724;
+  font-size: 1.1rem;
+}
+
+.wishes-form input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0 25px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+}
+
+.wishes-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.wishes-form button {
+  background-color: #c1121f;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.wishes-form button:hover {
+  background-color: #a00d18;
+}
+
+/* ==================== PARALLAX (Día 23) ==================== */
+.parallax-day {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.parallax-day p {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.parallax {
+  height: 500px;
+  background-image: url('https://thumbs.dreamstime.com/b/red-christmas-ornaments-covered-snowflakes-animated-snowfall-new-year-tree-decor-balls-beautifully-close-up-shot-342174921.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 15px;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 42px;
+  font-weight: bold;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
+
+.parallax-first::before {
+  content: "Viaje al Polo Norte";
+}
+
+.parallax-last::before {
+  content: "¡Llegamos!";
+}
+
+.content {
+  padding: 50px;
+  line-height: 1.9;
+  font-size: 18px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+.content h3 {
+  color: #c1121f;
+  font-size: 28px;
+}
+
+/* ==================== ESCENA FINAL (Día 24) ==================== */
+.scene-day {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.scene-day p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.scene {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.header, .footer {
+  background-color: #003366;
+  color: white;
+  padding: 25px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.gifts, .tree-container, .chimney {
+  flex: 1;
+  min-width: 280px;
+}
+
+.gifts p, .chimney p {
+  background-color: #c1121f;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.gifts img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease;
+}
+
+.gifts img:hover {
+  transform: scale(1.12);
+}
+
+.tree {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease;
+}
+
+.tree:hover {
+  transform: translateY(-15px);
+}
+
+.star {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.8; transform: translateX(-50%) scale(1); }
+  to { opacity: 1; transform: translateX(-50%) scale(1.3); }
+}
+
+.chimney-box {
+  height: 320px;
+  background-color: #fff;
+  border: 5px solid #c1121f;
+  border-radius: 15px;
+  transition: background-color 0.6s ease;
+}
+
+.chimney-box:hover {
+  background-color: #ffebee;
+}
+
+/* ==================== MENSAJE SECRETO (Día 25) ==================== */
+.secret-day {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 60px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  min-height: 600px;
+  position: relative;
+}
+
+.secret-day > p {
+  color: #555;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.secret-container {
+  perspective: 1000px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secret-message {
+  font-size: 140px;
+  font-weight: bold;
+  letter-spacing: 15px;
+  opacity: 0;
+  transition: opacity 2s ease;
+  
+  background: linear-gradient(90deg, #c1121f, #186f3d, #c1121f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  text-shadow: 
+    0 0 30px #ff0000,
+    0 0 60px #00ff00,
+    0 0 90px #ff0000,
+    0 0 120px #00ff00;
+}
+
+.hint {
+  font-size: 30px;
+  margin-top: 100px;
+  color: #666;
+}
+
+.secret-day:hover .secret-message {
+  opacity: 1;
+}
+
+.secret-day:hover .secret-container {
+  transform: rotateX(15deg);
+  transition: transform 1.2s ease;
+}
+
+/* ==================== EL REGRESO DEL ELFO (Día 26) ==================== */
+.elf-day {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 100px 30px 50px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  position: relative;
+}
+
+.elf-day > p {
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #c1121f;
+  color: white;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fixed-nav img {
+  height: 70px;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+}
+
+.instruction {
+  font-size: 22px;
+  margin: 50px 0;
+  color: #186f3d;
+  font-weight: bold;
+}
+
+.long-content {
+  line-height: 1.9;
+  font-size: 19px;
+  text-align: left;
+  padding: 0 50px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.long-content h3 {
+  text-align: center;
+  color: #c1121f;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* ==================== LISTA DE PROPÓSITOS (Día 27) ==================== */
+.purposes-day {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.purposes-day > p {
+  color: #555;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.purposes-form {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 40px;
+  background-color: #f8fff8;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 2px solid #186f3d;
+}
+
+.purposes-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #155724;
+  font-size: 18px;
+}
+
+.purposes-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 17px;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+}
+
+.purposes-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 12px rgba(0,123,255,0.3);
+}
+
+.purposes-form input:invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+.purposes-form input:invalid:focus {
+  box-shadow: 0 0 12px rgba(220,53,69,0.4);
+}
+
+.purposes-form button {
+  background-color: #186f3d;
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 8px;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.purposes-form button:hover {
+  background-color: #134f2b;
+}
+
+.note {
+  font-size: 19px;
+  color: #666;
+  margin-top: 50px;
+  font-style: italic;
+}
+
+/* ==================== PORTADA AÑO NUEVO (Día 28) ==================== */
+.newyear-day {
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 50px 30px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.newyear-day > p {
+  color: #555;
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.newyear-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 40px;
+}
+
+.card {
+  background-color: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 50px 30px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  font-size: 44px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.old h2 { color: #ff6b6b; }
+.new h2 { color: #4ecdc4; }
+.wishes h2 { color: #ffd93d; }
+
+@media (max-width: 900px) {
+  .newyear-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 50px;
+  }
+  
+  .card {
+    padding: 60px 40px;
+  }
+  
+  .card h2 {
+    font-size: 50px;
+  }
+  
+  .card p {
+    font-size: 22px;
+  }
+}
