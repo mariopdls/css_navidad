@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff, #e0f7fa);
+    min-height: 100vh;
+}
+
+.scene {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.gifts {
+    flex: 1;
+    text-align: center;
+}
+
+.gifts p {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
+
+.gifts img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.gifts img:hover {
+    transform: scale(1.1);
+}
+
+.tree-container {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.tree {
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.5s ease;
+}
+
+.tree:hover {
+    transform: translateY(-10px);
+}
+
+.star {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.8; transform: translateX(-50%) scale(1); }
+    to { opacity: 1; transform: translateX(-50%) scale(1.2); }
+}
+
+.chimney {
+    flex: 1;
+    text-align: center;
+}
+
+.chimney p {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
+
+.chimney-box {
+    background-color: #fff;
+    height: 300px;
+    border: 4px solid #ccc;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.chimney-box:hover {
+    background-color: #ffeeee;
+}
+
+.footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    margin-top: 40px;
+}

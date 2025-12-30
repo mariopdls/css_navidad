@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 40px;
+}
+
+.day {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.crystal-ball-container {
+    margin: 80px auto;
+    width: 300px;
+}
+
+.crystal-ball-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+.crystal-ball-container:hover img {
+    transform: rotate(20deg) scale(1.3);
+}

@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.day {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+p {
+    text-align: center;
+}
+
+.parallax {
+    height: 500px;
+    background-image: url('https://thumbs.dreamstime.com/b/red-christmas-ornaments-covered-snowflakes-animated-snowfall-new-year-tree-decor-balls-beautifully-close-up-shot-342174921.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.parallax:first-child::before {
+    content: "Viaje al Polo Norte";
+}
+
+.parallax:last-child::before {
+    content: "¡Llegamos!";
+}
+
+.content {
+    padding: 50px;
+    line-height: 1.8;
+    font-size: 18px;
+    min-height: 800px; /* Para forzar scroll */
+}
+
+.content h2, .content h3 {
+    color: #c00;
+    text-align: center;
+}

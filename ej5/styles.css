@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 40px;
+}
+
+.day {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.banner {
+    background-color: gold;
+    color: black;
+    padding: 60px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.banner small {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+@media (max-width: 600px) {
+    .banner {
+        background-color: orange;
+    }
+}

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #001f3f, #000033);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.day {
+    text-align: center;
+    padding: 40px;
+    max-width: 900px;
+}
+
+.day > p {
+    font-size: 24px;
+    margin-bottom: 80px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.secret-container {
+    perspective: 1000px;
+}
+
+.secret-message {
+    font-size: 120px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    opacity: 0;
+    transition: opacity 1.8s ease;
+    
+    text-shadow: 
+        0 0 20px #ff0000,
+        0 0 40px #ff0000,
+        0 0 60px #00ff00,
+        0 0 80px #00ff00,
+        0 0 100px #ff0000,
+        0 0 120px #00ff00;
+    
+    background: linear-gradient(90deg, red, green, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hint {
+    font-size: 28px;
+    margin-top: 100px;
+    opacity: 0.7;
+}
+
+body:hover .secret-message {
+    opacity: 1;
+}
+
+body:hover .secret-container {
+    transform: rotateX(10deg);
+    transition: transform 1s ease;
+}

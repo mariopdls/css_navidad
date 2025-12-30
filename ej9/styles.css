@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 40px;
+}
+
+.day {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.snowflake {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+}
+
+.snowflake::before,
+.snowflake::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 10px;
+    background-color: #007bff;
+    transform: translate(-50%, -50%);
+}
+
+.snowflake::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}

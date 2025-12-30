@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 27 - Lista de Propósitos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="day">
+        <p>Día 27 de diciembre: Lista de Propósitos (Validación HTML5 y CSS)<br>
+        El HTML utiliza el atributo <code>required</code>. El CSS usa el pseudo-clase :invalid para estilizar campos con errores de validación.</p>
+        
+        <form class="purposes-form" novalidate>
+            <label for="purpose">Propósito promedio</label>
+            <input type="text" id="purpose" name="purpose" required placeholder="Escribe tu propósito de Año Nuevo">
+            
+            <label for="email">Email (requerido):</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            
+            <button type="submit">Guardar</button>
+        </form>
+        
+        <p class="note">Intenta enviar el formulario vacío o con un email inválido para ver el estilo rojo en los campos erróneos.</p>
+    </div>
+
+</body>
+</html>

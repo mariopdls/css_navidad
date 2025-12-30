@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0d1b2a;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+  display: flex;                    
+  flex-wrap: wrap;                 
+  justify-content: center;
+  gap: 20px;
+  background: #386641;
+  padding: 20px 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  max-width: 90%;
+}
+
+.categoria {
+  background: #6a994e;
+  color: white;
+  padding: 16px 28px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  min-width: 140px;
+  transition: transform 0.2s;
+}
